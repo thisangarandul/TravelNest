@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelNest | Travel Mood</title>
+  <meta name="description" content="Set the mood for your next trip and manage your travel bucket list.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        TravelNest
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="explorer.html">Explorer</a>
+        <a href="planner.html">Planner</a>
+        <a href="generator.html">Surprise Me</a>
+        <a href="mood.html" class="active">Mood</a>
+        <a href="feedback.html">Support</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="explorer.html">Explorer</a>
+    <a href="planner.html">Planner</a>
+    <a href="generator.html">Surprise Me</a>
+    <a href="mood.html">Mood</a>
+    <a href="feedback.html">Support</a>
+  </div>
+  <div class="header-spacer"></div>
+
+  <main>
+    <section class="section reveal active">
+      <h1 class="section-title">Travel Mood & Dashboard</h1>
+      
+      <p style="text-align:center; margin-bottom:3rem;">Click to play ambient sounds and set the mood for your next adventure.</p>
+      
+      <div class="mood-grid" id="mood-grid">
+        <div class="mood-card" data-sound="assets/audio/beach.mp3">
+          <div class="mood-icon">🌊</div>
+          <h3>Beach Waves</h3>
+        </div>
+        <div class="mood-card" data-sound="assets/audio/forest.mp3">
+          <div class="mood-icon">🌲</div>
+          <h3>Forest Ambience</h3>
+        </div>
+        <div class="mood-card" data-sound="assets/audio/city.mp3">
+          <div class="mood-icon">🏙️</div>
+          <h3>City Life</h3>
+        </div>
+      </div>
+
+      <div class="list-container">
+        <div class="list-box">
+          <h2>My Wishlist</h2>
+          <p style="font-size:0.9rem; color:var(--dark-light); margin-bottom:1rem;">Mark places you've already visited.</p>
+          <div id="wishlist-container">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+        
+        <div class="list-box">
+          <h2>Saved Trip Plans</h2>
+          <div id="saved-trips-container">
+            <!-- Extra implementation for showing saved planner trips -->
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const container = document.getElementById("saved-trips-container");
+                const trips = JSON.parse(localStorage.getItem("savedTrips")) || [];
+                if(trips.length === 0) {
+                  container.innerHTML = "<p>No trips saved yet. Go to Planner!</p>";
+                } else {
+                  trips.forEach(t => {
+                    const div = document.createElement("div");
+                    div.className = "list-item";
+                    div.innerHTML = `<div><strong>${t.destName}</strong> (${t.days} days)</div><div>Budget: $${t.budget}</div>`;
+                    container.appendChild(div);
+                  });
+                }
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>TravelNest</h3>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TravelNest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

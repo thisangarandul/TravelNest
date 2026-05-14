@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelNest | Trip Planner</title>
+  <meta name="description" content="Plan your trip budget with our interactive budget calculator.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        TravelNest
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="explorer.html">Explorer</a>
+        <a href="planner.html" class="active">Planner</a>
+        <a href="generator.html">Surprise Me</a>
+        <a href="mood.html">Mood</a>
+        <a href="feedback.html">Support</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="explorer.html">Explorer</a>
+    <a href="planner.html">Planner</a>
+    <a href="generator.html">Surprise Me</a>
+    <a href="mood.html">Mood</a>
+    <a href="feedback.html">Support</a>
+  </div>
+  <div class="header-spacer"></div>
+
+  <main>
+    <section class="section reveal active">
+      <h1 class="section-title">Trip Budget Planner</h1>
+      
+      <div class="glass-panel">
+        <form id="planner-form" style="display:flex; flex-direction:column; gap:1.5rem;">
+          <div class="input-group">
+            <label for="plan-dest">Select Destination</label>
+            <select id="plan-dest" class="input-field" required>
+              <option value="" disabled selected>Choose a destination...</option>
+              <!-- Options injected via JS -->
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="plan-days">Number of Days</label>
+            <input type="number" id="plan-days" class="input-field" min="1" max="90" placeholder="E.g., 7" required>
+          </div>
+          
+          <div class="input-group">
+            <label for="plan-budget">Total Budget ($)</label>
+            <input type="number" id="plan-budget" class="input-field" min="100" placeholder="E.g., 1500" required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="margin-top:1rem; width:100%;">Calculate Budget</button>
+        </form>
+
+        <div id="planner-result" class="result-box">
+          <h3 style="margin-bottom: 1rem;">Budget Analysis</h3>
+          <p id="result-text" style="font-weight:600; margin-bottom:1rem;"></p>
+          <div class="budget-meter">
+            <div id="budget-fill" class="budget-fill"></div>
+          </div>
+          <button id="save-trip-btn" class="btn btn-outline" style="margin-top:1.5rem;">Save Trip Idea</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>TravelNest</h3>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TravelNest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelNest | Feedback & Support</title>
+  <meta name="description" content="Contact TravelNest support or browse our FAQs.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        TravelNest
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="explorer.html">Explorer</a>
+        <a href="planner.html">Planner</a>
+        <a href="generator.html">Surprise Me</a>
+        <a href="mood.html">Mood</a>
+        <a href="feedback.html" class="active">Support</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="explorer.html">Explorer</a>
+    <a href="planner.html">Planner</a>
+    <a href="generator.html">Surprise Me</a>
+    <a href="mood.html">Mood</a>
+    <a href="feedback.html">Support</a>
+  </div>
+  <div class="header-spacer"></div>
+
+  <main>
+    <section class="section reveal active">
+      <h1 class="section-title">Support & Feedback</h1>
+      
+      <div class="grid">
+        <div class="glass-panel" style="margin:0; max-width:100%;" id="contact">
+          <h2>Contact Us</h2>
+          <p style="margin-bottom: 2rem; color:var(--dark-light);">We'd love to hear from you. Send us your feedback or questions.</p>
+          
+          <div id="success-msg" style="display:none; background:var(--success); color:white; padding:1rem; border-radius:0.5rem; margin-bottom:1.5rem;">
+            Message sent successfully!
+          </div>
+
+          <form id="feedback-form" style="display:flex; flex-direction:column; gap:1.5rem;">
+            <div class="input-group">
+              <label for="fb-name">Your Name</label>
+              <input type="text" id="fb-name" class="input-field" required>
+            </div>
+            
+            <div class="input-group">
+              <label for="fb-email">Email Address</label>
+              <input type="email" id="fb-email" class="input-field" required>
+            </div>
+            
+            <div class="input-group">
+              <label for="fb-msg">Message</label>
+              <textarea id="fb-msg" class="input-field" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+
+        <div class="glass-panel" style="margin:0; max-width:100%;">
+          <h2>Frequently Asked Questions</h2>
+          <div style="margin-top:2rem;">
+            <div class="faq-item">
+              <button class="faq-question">How does the Budget Planner work? <span style="font-size:1.5rem;">+</span></button>
+              <div class="faq-answer">
+                <p>The Budget Planner calculates the estimated daily cost for accommodation, food, and activities based on your selected destination and number of days. It then compares it with your budget to give you a personalized analysis.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question">Where is my saved data stored? <span style="font-size:1.5rem;">+</span></button>
+              <div class="faq-answer">
+                <p>All your wishlists, saved trips, and preferences are stored securely in your browser's Local Storage. We do not store your data on external servers, ensuring complete privacy.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question">Can I use TravelNest offline? <span style="font-size:1.5rem;">+</span></button>
+              <div class="faq-answer">
+                <p>Yes! TravelNest is built as a Progressive Web App (PWA). Once you've visited the site, you can install it on your device and access many features offline.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>TravelNest</h3>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TravelNest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <!-- Overriding the id to match JS query for form -->
+  <script>
+    document.getElementById("feedback-form").id = "contact-form";
+  </script>
+</body>
+</html>

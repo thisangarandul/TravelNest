@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelNest | Surprise Me</title>
+  <meta name="description" content="Generate a random trip based on your preferences.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        TravelNest
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="explorer.html">Explorer</a>
+        <a href="planner.html">Planner</a>
+        <a href="generator.html" class="active">Surprise Me</a>
+        <a href="mood.html">Mood</a>
+        <a href="feedback.html">Support</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="explorer.html">Explorer</a>
+    <a href="planner.html">Planner</a>
+    <a href="generator.html">Surprise Me</a>
+    <a href="mood.html">Mood</a>
+    <a href="feedback.html">Support</a>
+  </div>
+  <div class="header-spacer"></div>
+
+  <main>
+    <section class="section reveal active">
+      <h1 class="section-title">Random Trip Generator</h1>
+      
+      <div class="glass-panel">
+        <p style="text-align:center; margin-bottom: 2rem;">Don't know where to go? Let us choose for you based on your preferences!</p>
+        
+        <form id="generator-form" style="display:flex; flex-direction:column; gap:1.5rem;">
+          <div class="input-group">
+            <label for="gen-type">Travel Type</label>
+            <select id="gen-type" class="input-field">
+              <option value="any">Surprise Me (Any)</option>
+              <option value="adventure">Adventure</option>
+              <option value="relaxation">Relaxation</option>
+              <option value="cultural">Cultural</option>
+              <option value="nature">Nature</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="gen-cost">Budget Level</label>
+            <select id="gen-cost" class="input-field">
+              <option value="any">Any Budget</option>
+              <option value="low">Low (Backpacker)</option>
+              <option value="medium">Medium (Standard)</option>
+              <option value="high">High (Luxury)</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-secondary" style="margin-top:1rem; width:100%; font-size:1.1rem;">Generate Trip</button>
+        </form>
+
+        <div id="generator-result" class="result-box">
+          <h2>Your Next Destination</h2>
+          <div id="generated-dest" style="margin-top:1.5rem;"></div>
+          <button type="button" class="btn btn-outline" style="margin-top:2rem;" onclick="document.getElementById('generator-form').dispatchEvent(new Event('submit'))">Surprise Me Again</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>TravelNest</h3>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TravelNest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

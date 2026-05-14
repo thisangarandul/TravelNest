@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelNest | Explorer</title>
+  <meta name="description" content="Explore beautiful destinations, search and filter to find your perfect travel spot.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        TravelNest
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="explorer.html" class="active">Explorer</a>
+        <a href="planner.html">Planner</a>
+        <a href="generator.html">Surprise Me</a>
+        <a href="mood.html">Mood</a>
+        <a href="feedback.html">Support</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="explorer.html">Explorer</a>
+    <a href="planner.html">Planner</a>
+    <a href="generator.html">Surprise Me</a>
+    <a href="mood.html">Mood</a>
+    <a href="feedback.html">Support</a>
+  </div>
+  <div class="header-spacer"></div>
+
+  <main>
+    <section class="section reveal active">
+      <h1 class="section-title">Explore Destinations</h1>
+      
+      <div class="filters-bar">
+        <div class="input-group">
+          <label for="search-dest">Search by Name/Country</label>
+          <input type="text" id="search-dest" class="input-field" placeholder="E.g., Japan, Rome...">
+        </div>
+        <div class="input-group">
+          <label for="filter-continent">Filter by Continent</label>
+          <select id="filter-continent" class="input-field">
+            <option value="all">All Continents</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="North America">North America</option>
+            <option value="South America">South America</option>
+            <option value="Africa">Africa</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid" id="explorer-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="dest-modal">
+      <div class="modal-content">
+        <div class="modal-close" id="modal-close">&times;</div>
+        <div id="modal-content-body">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>TravelNest</h3>
+        <p>Empowering travelers to discover the world through curated experiences.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TravelNest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
